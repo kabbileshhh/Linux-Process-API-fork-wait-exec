@@ -33,23 +33,19 @@ Test the C Program for the desired output.
 int main() {
     int pid = fork();
 
-    if (pid == 0) {
-        printf("I am child, my PID is %d\n", getpid());
-        printf("My parent PID is: %d\n", getppid());
+    if (pid == 0) { 
+        printf("I am child, my PID is %d\n", getpid()); 
+        printf("My parent PID is: %d\n", getppid()); 
         sleep(2);  // Keep child alive for verification
-    } else {
-        printf("I am parent, my PID is %d\n", getpid());
-        wait(NULL);
+    } else { 
+        printf("I am parent, my PID is %d\n", getpid()); 
+        wait(NULL); 
     }
-
-    return 0;
 }
 
 
 ##OUTPUT
-
-<img width="658" height="412" alt="Screenshot 2026-08-05 204443" src="https://github.com/user-attachments/assets/6ddbab16-5de0-4ac0-ae94-62dc38fdae1c" />
-
+![01.png](img/01.png)
 
 
 ## C Program to execute Linux system commands using Linux API system calls exec() , exit() , wait() family
@@ -97,19 +93,7 @@ int main() {
 
 
 ##OUTPUT
-
-<img width="695" height="468" alt="Screenshot 2026-08-05 204704" src="https://github.com/user-attachments/assets/1d7e67ea-be1c-4c1d-aecc-7ce750fa712a" />
-
-
-
-
-
-
-
-
-
-
-
+![02.png](img/02.png)
 
 
 
